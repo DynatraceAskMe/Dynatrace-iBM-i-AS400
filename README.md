@@ -10,29 +10,53 @@ How to monitor IBM i ( AS400 )using the IBM i ActiveGate extension.
 4.  An ODBC driver manager installed on your ActiveGate host. 
 5.  DB2 for i ODBC driver installed on the ActiveGate. 
 6.  Open ports between ActiveGate and IBM i server:  
-    [![Screen-Shot-2564-07-13-at-17-41-56.png](https://i.postimg.cc/2yXh5NFv/Screen-Shot-2564-07-13-at-17-41-56.png)](https://postimg.cc/Wqgh9Kyb) 
-## DB2 for i ODBC driver
-If you using ActiveGate on Windows, You can download ODBC driver packages from [IBM’s ESS](https://www.ibm.com/support/pages/obtaining-ibm-i-access-client-solutions) site.  
 
-## Extension Installation on Windows ActiveGate  
+    [![Screen-Shot-2564-07-13-at-17-41-56.png](https://i.postimg.cc/2yXh5NFv/Screen-Shot-2564-07-13-at-17-41-56.png)](https://postimg.cc/Wqgh9Kyb)  
+    
+## ODBC driver manager installation (Linux only)
+If your ActiveGate host is running on Linux, install the unixODBC driver manager according to your environment:  
+
+RedHet:  
+>yum install unixODBC 
+
+Ubuntu:  
+>apt-get install unixodbc-dev unixodbc-bin unixodbc  
+
+
+## DB2 for i ODBC driver
+iBM provides an ODBC driver for Windows or Linux  applications to connect to IBM i, You can download ODBC driver packages from [IBM’s ESS](https://www.ibm.com/support/pages/obtaining-ibm-i-access-client-solutions) site.  
+
+## Extension Installation  
 1.  Download IBM iSeries ActiveGate extension, You can download IBM iSeries ActiveGate extension from [iBM i](https://www.dynatrace.com/hub/?query=iBM)  
 2.  Download to get the extension ZIP file. Don't rename the file.  
 3.  Unzip the ZIP file to the **plugin_deployment** directory of your ActiveGate host.
+    #### ActiveGate on Windows  
+    You can deploy extension the ActiveGate deployment directory. By default **%PROGRAMFILES%\dynatrace\remotepluginmodule\plugin_deployment**  
 
     [![message-Image-1626171461603.jpg](https://i.postimg.cc/NGCwtGrM/message-Image-1626171461603.jpg)](https://postimg.cc/Z0NQFSHt)
-4.  Install ODBC driver packages (iBm i) on your ActiveGate host.
-5.  Restart Dynatrace RemotePluginModule service.  
-6.  In Dynatrace, select **Settings**, the **Monitoring** button, **Monitored technologies**, **Custom extensions**,**Upload extensions**, and upload the zipped file used in step 2.  
+    
+    #### ActiveGate on Linux    
+    You can deploy extension the ActiveGate deployment directory. By default **%/opt/dynatrace/remotepluginmodule/plugin_deployment**  
+    
+    [![Screen-Shot-2564-07-13-at-22-28-34.png](https://i.postimg.cc/bv4cM67Y/Screen-Shot-2564-07-13-at-22-28-34.png)](https://postimg.cc/qtc56GBW)
+    
+4.  Install ODBC driver packages (iBm i) on your ActiveGate host.  
+
+    [![Screen-Shot-2564-07-13-at-22-50-38.png](https://i.postimg.cc/nz7NCg2s/Screen-Shot-2564-07-13-at-22-50-38.png)](https://postimg.cc/1nmvdWLP)  
+    
+5.  Install ODBC driver packages (iBm i) on your ActiveGate host.  
+6.  Restart Dynatrace RemotePluginModule service.  
+7.  In Dynatrace, select **Settings**, the **Monitoring** button, **Monitored technologies**, **Custom extensions**,**Upload extensions**, and upload the zipped file used in step 2.  
 
     [![message-Image-1626171473046.jpg](https://i.postimg.cc/pTxk3jBS/message-Image-1626171473046.jpg)](https://postimg.cc/3ySgvdVj)
     
     [![message-Image-1626171483248.jpg](https://i.postimg.cc/ydkhMTZv/message-Image-1626171483248.jpg)](https://postimg.cc/CBpfDkJq)
     
-7.  After, you upload extension successful, you can click the **iBM i (Version ...)**  
+8.  After, you upload extension successful, you can click the **iBM i (Version ...)**  
     
     [![message-Image-1626171492474.jpg](https://i.postimg.cc/J7jKMPF2/message-Image-1626171492474.jpg)](https://postimg.cc/z3XTkS8C)
 
-8. Enter the endpoint information requested for connecting to the AS400.  
+9. Enter the endpoint information requested for connecting to the AS400.  
   
     #### For example configuration
     
