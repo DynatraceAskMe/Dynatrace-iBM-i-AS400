@@ -46,7 +46,16 @@ iBM provides an ODBC driver for Windows or Linux  applications to connect to IBM
     
 5.  Install ODBC driver packages (iBm i) on your ActiveGate host.  
 6.  Restart Dynatrace RemotePluginModule service.  
-7.  In Dynatrace, select **Settings**, the **Monitoring** button, **Monitored technologies**, **Custom extensions**,**Upload extensions**, and upload the zipped file used in step 2.  
+    
+    - On Linux, restart the service using the following commands with admin rights:  
+        >systemctl restart remotepluginmodule.service  
+       
+    - On Windows, run these two commands in a Command Prompt launched as Admin:  
+        >sc stop "Dynatrace Remote Plugin Module"  
+        >sc start "Dynatrace Remote Plugin Module"  
+
+
+8.  In Dynatrace, select **Settings**, the **Monitoring** button, **Monitored technologies**, **Custom extensions**,**Upload extensions**, and upload the zipped file used in step 2.  
 
     [![message-Image-1626171473046.jpg](https://i.postimg.cc/pTxk3jBS/message-Image-1626171473046.jpg)](https://postimg.cc/3ySgvdVj)
     
