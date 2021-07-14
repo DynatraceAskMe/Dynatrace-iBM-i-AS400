@@ -6,6 +6,7 @@ How to monitor IBM i ( AS400 )using the IBM i ActiveGate extension.
     - ActiveGate version 1.175+ is ready to accept and run extensions. If you are running an earlier version of ActiveGate,   
       see [Install ActiveGate plugin module](https://www.dynatrace.com/support/help/extend-dynatrace/extensions/development/install-activegate-plugin-module/) for instructions on installing the plugin module.  
     - For Environment ActiveGate installation instructions, see [Dynatrace ActiveGate](https://www.dynatrace.com/support/help/extend-dynatrace/extensions/development/install-activegate-plugin-module/).  
+    - Hot to [Install environment ActiveGate](https://github.com/DynatraceAskMe/Install-Dynatrace-ActiveGate-On-Linux/blob/main/README.md)  
 3.  IBM i (formerly iSeries/ AS400) 7.2+ host. 
 4.  An ODBC driver manager installed on your ActiveGate host. 
 5.  DB2 for i ODBC driver installed on the ActiveGate. 
